@@ -10,17 +10,14 @@ namespace DBControl.Data
 {
     public class MonMaperContext : DbContext
     {
-
-        public class ApplicationDbContext : DbContext
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            {
-                optionsBuilder.UseMySql("server=localhost;userid=developer;password=diego#dev;database=monmaperdb",
-                    new MySqlServerVersion( new Version(8, 0, 27)));
-            }
+            optionsBuilder.UseMySql("server=localhost;userid=developer;password=diego#dev;database=monmaperdb",
+                new MySqlServerVersion( new Version(8, 0, 27)));
         }
 
-        public DbSet<Income> Incomes;
-        public DbSet<Expenditure> Expenditures;
+        public DbSet<Income> Incomes { get; set; }
+        public DbSet<Expenditure> Expenditures { get; set; }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿Imports DesktopController
+Imports Model
 
 Public Class Dashboard
     Private ReadOnly _ExpenditureController As ExpendituresDeskController
@@ -16,4 +17,7 @@ Public Class Dashboard
         _IncomeController = New IncomesDeskController
     End Sub
 
+    Private Sub btnTeste_Click(sender As Object, e As EventArgs) Handles btnTeste.Click
+
+    End Sub
 End Class

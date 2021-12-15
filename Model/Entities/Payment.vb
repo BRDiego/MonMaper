@@ -1,8 +1,19 @@
 ﻿Public Class Payment
+
+    Private inId As Integer
     Private dcAmount As Decimal
     Private dtMoment As Date
     Private stSource As String
     Private stDetails As String
+
+    Public Property Id As Integer
+        Set(value As Integer)
+            inId = value
+        End Set
+        Get
+            Return inId
+        End Get
+    End Property
 
     Public Property Amount As Decimal
         Set(value As Decimal)
