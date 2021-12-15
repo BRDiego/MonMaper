@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBControl.Migrations
 {
     [DbContext(typeof(MonMaperContext))]
-    [Migration("20211215010722_GetSetAdded")]
-    partial class GetSetAdded
+    [Migration("20211215132150_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

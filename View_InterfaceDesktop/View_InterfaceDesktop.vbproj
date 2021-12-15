@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DBControl\DBControl.csproj" />
     <ProjectReference Include="..\DesktopController\DesktopController.csproj" />
     <ProjectReference Include="..\Model\Model.vbproj" />
   </ItemGroup>

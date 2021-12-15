@@ -4,10 +4,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DBControl.Migrations
 {
-    public partial class GetSetAdded : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterDatabase()
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateTable(
                 name: "Expenditures",
                 columns: table => new

@@ -17,7 +17,11 @@
 
     Public Property Amount As Decimal
         Set(value As Decimal)
-            dcAmount = value
+            If value < 0 Or value > 1000000 Then
+                MsgBox("Amounts can have a maximum value of 1.000.000")
+            Else
+                dcAmount = value
+            End If
         End Set
         Get
             Return dcAmount
@@ -26,7 +30,11 @@
 
     Public Property Moment As Date
         Set(value As Date)
-            dtMoment = value
+            If value.Date.Year < 1950 Or value.Date.Year > Now.Year Then
+                MsgBox("A payment date must be within the years 1950 and the current")
+            Else
+                dtMoment = value
+            End If
         End Set
         Get
             Return dtMoment
@@ -35,7 +43,11 @@
 
     Public Property Source As String
         Set(value As String)
-            stSource = value
+            If value.ToString.Length = 0 Or value.ToString.Length > 100 Then
+                MsgBox("Source name must be within 0 or 100 characters")
+            Else
+                stSource = value
+            End If
         End Set
         Get
             Return stSource
@@ -44,7 +56,11 @@
 
     Public Property Details As String
         Set(value As String)
-            stDetails = value
+            If value.ToString.Length > 300 Then
+                MsgBox("Details can have a maximum of 300 characters")
+            Else
+                stDetails = value
+            End If
         End Set
         Get
             Return stDetails
