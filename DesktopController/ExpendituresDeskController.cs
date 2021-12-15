@@ -4,7 +4,7 @@ using Model;
 
 namespace DesktopController
 {
-    internal class ExpendituresDeskController
+    public class ExpendituresDeskController
     {
         int AddExpenditure(Expenditure obj)
         {
