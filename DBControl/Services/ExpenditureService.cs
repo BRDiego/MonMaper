@@ -5,34 +5,34 @@ using System.Linq;
 
 namespace DBControl.Services
 {
-    public class ExpenditureService : IPaymentCRUD
+    public class ExpenditureService
     {
-        public Payment FindById(int id)
+        public Expenditure FindById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public int Insert(Payment obj)
+        public int Insert(Expenditure obj)
         {
             throw new NotImplementedException();
         }
 
-        public List<Payment> ListAll()
+        public List<Expenditure> ListAll()
         {
             throw new NotImplementedException();
         }
 
-        public List<Payment> ListByMonth(int month)
+        public List<Expenditure> ListByMonth(int month)
         {
             throw new NotImplementedException();
         }
 
-        public int Remove(Payment obj)
+        public int Remove(Expenditure obj)
         {
             throw new NotImplementedException();
         }
 
-        public int Update(Payment obj)
+        public int Update(Expenditure obj)
         {
             throw new NotImplementedException();
         }

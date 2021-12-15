@@ -6,6 +6,21 @@
     Private stSource As String
     Private stDetails As String
 
+    Public Sub New()
+    End Sub
+
+    Public Sub New(amount As Decimal, moment As Date, source As String, details As String)
+        Me.Amount = amount
+        Me.Moment = moment
+        Me.Source = source
+        Me.Details = details
+    End Sub
+
+    Public Sub New(id As Integer, amount As Decimal, moment As Date, source As String, details As String)
+        Me.New(amount, moment, source, details)
+        Me.Id = id
+    End Sub
+
     Public Property Id As Integer
         Set(value As Integer)
             inId = value
@@ -17,8 +32,8 @@
 
     Public Property Amount As Decimal
         Set(value As Decimal)
-            If value < 0 Or value > 1000000 Then
-                MsgBox("Amounts can have a maximum value of 1.000.000")
+            If value < 0 Or value > 100000 Then
+                MsgBox("Amounts can have a maximum value of 100.000")
             Else
                 dcAmount = value
             End If
@@ -66,4 +81,12 @@
             Return stDetails
         End Get
     End Property
+
+    Public Overrides Function Equals(obj As Object) As Boolean
+        Dim doesEquals As Boolean
+        If obj.Amount = Me.Amount And obj.Moment = Me.Moment And obj.Source = Me.Source And obj.Details = Me.Details Then
+            doesEquals = True
+        End If
+        Return doesEquals
+    End Function
 End Class

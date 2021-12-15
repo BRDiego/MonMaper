@@ -1,39 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using Model;
-
+using DBControl.Services;
 namespace DesktopController
 {
     public class IncomesDeskController
     {
-        int AddIncome(Income obj)
+        private readonly IncomeService _incomeService;
+
+        public IncomesDeskController()
         {
-            throw new NotImplementedException();
+            IncomeService incService = new IncomeService(new DBControl.Data.MonMaperContext());
+            _incomeService = incService;
+        }
+        public int AddIncome(Income obj)
+        {
+            return _incomeService.Insert(obj);
         }
 
-        Income LoadIncome(int id)
+        public Income LoadIncome(int id)
         {
-            throw new NotImplementedException();
+            return _incomeService.FindById(id);
         }
 
-        int UpdateIncome(Income obj)
+        public int UpdateIncome(Income obj)
         {
-            throw new NotImplementedException();
+            return _incomeService.Update(obj);
         }
 
-        int DeleteIncome(Income obj)
+        public int DeleteIncome(Income obj)
         {
-            throw new NotImplementedException();
+            return _incomeService.Update(obj);
         }
 
-        List<Income> ListIncomes()
+        public List<Income> ListIncomes()
         {
-            throw new NotImplementedException();
+            return _incomeService.ListAll();
         }
 
-        List<Income> ListIncomes(int month)
+        public List<Income> ListIncomes(int month)
         {
-            throw new NotImplementedException();
+            return _incomeService.ListByMonth(month);
         }
     }
 }

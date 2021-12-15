@@ -2,39 +2,97 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DBControl.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DBControl.Services
 {
-    public class IncomeService : IPaymentCRUD
+    public class IncomeService
     {
-        public Payment FindById(int id)
+        private readonly MonMaperContext _context;
+        public IncomeService(MonMaperContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public int Insert(Income obj)
+        {
+            try
+            {
+                _context.Incomes.Add(obj);
+                _context.SaveChanges();
+                return 1;
+            }
+            catch (Exception er)
+            {
+                throw new Exception(er.Message);
+            }
         }
 
-        public int Insert(Payment obj)
+        public List<Income> ListAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Income> list = _context.Incomes.ToList();
+                return list;
+            }
+            catch (Exception er)
+            {
+                throw new Exception(er.Message);
+            }
         }
 
-        public List<Payment> ListAll()
+        public List<Income> ListByMonth(int month)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Income> list = _context.Incomes.Where(x => x.Moment.Month == month).ToList();
+                return list;
+            }
+            catch (Exception er)
+            {
+                throw new Exception(er.Message);
+            }
         }
 
-        public List<Payment> ListByMonth(int month)
+        public Income FindById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var obj = _context.Incomes.Find(id);               
+                return obj;
+            }
+            catch (Exception er)
+            {
+                throw new Exception(er.Message);
+            }
         }
 
-        public int Remove(Payment obj)
+        public int Update(Income obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Incomes.Update(obj);
+                _context.SaveChanges();
+                return 1;
+            }
+            catch (Exception er)
+            {
+                throw new Exception(er.Message);
+            }
         }
 
-        public int Update(Payment obj)
+        public int Remove(Income obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Remove(obj);
+                _context.SaveChanges();
+                return 1;
+            }
+            catch (Exception er)
+            {
+                throw new Exception(er.Message);
+            }
         }
     }
 }
