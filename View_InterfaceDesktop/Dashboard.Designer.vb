@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Dashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,138 +20,187 @@ Partial Class Dashboard
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.btnTeste = New System.Windows.Forms.Button()
-        Me.dgvIncomes = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.testarlistacomp = New System.Windows.Forms.Button()
-        Me.dgcolQuantia = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dgcolMomento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dgcolFonte = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dgcolDetalhes = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.dgvIncomes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.DgvIncomes = New System.Windows.Forms.DataGridView()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.OptionsMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaymentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IncomesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExpendituresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DgvExpenditures = New System.Windows.Forms.DataGridView()
+        Me.PanelContent = New System.Windows.Forms.Panel()
+        CType(Me.DgvIncomes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.DgvExpenditures, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnTeste
+        'DgvIncomes
         '
-        Me.btnTeste.Location = New System.Drawing.Point(852, 12)
-        Me.btnTeste.Name = "btnTeste"
-        Me.btnTeste.Size = New System.Drawing.Size(139, 39)
-        Me.btnTeste.TabIndex = 1
-        Me.btnTeste.Text = "remover"
-        Me.btnTeste.UseVisualStyleBackColor = True
-        '
-        'dgvIncomes
-        '
-        Me.dgvIncomes.AllowUserToDeleteRows = False
-        Me.dgvIncomes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvIncomes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvIncomes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dgcolQuantia, Me.dgcolMomento, Me.dgcolFonte, Me.dgcolDetalhes})
+        Me.DgvIncomes.AllowUserToDeleteRows = False
+        Me.DgvIncomes.AllowUserToResizeColumns = False
+        Me.DgvIncomes.AllowUserToResizeRows = False
+        Me.DgvIncomes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvIncomes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvIncomes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvIncomes.ColumnHeadersHeight = 30
+        Me.DgvIncomes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvIncomes.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvIncomes.Location = New System.Drawing.Point(12, 128)
-        Me.dgvIncomes.Name = "dgvIncomes"
-        Me.dgvIncomes.RowHeadersVisible = False
-        Me.dgvIncomes.RowTemplate.Height = 25
-        Me.dgvIncomes.Size = New System.Drawing.Size(1240, 221)
-        Me.dgvIncomes.TabIndex = 2
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvIncomes.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DgvIncomes.Location = New System.Drawing.Point(12, 60)
+        Me.DgvIncomes.MultiSelect = False
+        Me.DgvIncomes.Name = "DgvIncomes"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvIncomes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DgvIncomes.RowHeadersVisible = False
+        Me.DgvIncomes.RowHeadersWidth = 33
+        Me.DgvIncomes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DgvIncomes.RowTemplate.Height = 40
+        Me.DgvIncomes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvIncomes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.DgvIncomes.Size = New System.Drawing.Size(1223, 221)
+        Me.DgvIncomes.TabIndex = 2
         '
-        'Button1
+        'MenuStrip1
         '
-        Me.Button1.Location = New System.Drawing.Point(481, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 39)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "listar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsMenuToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 24)
+        Me.MenuStrip1.TabIndex = 4
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'Button2
+        'OptionsMenuToolStripMenuItem
         '
-        Me.Button2.Location = New System.Drawing.Point(680, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(139, 39)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "listar por mes"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.OptionsMenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PaymentsToolStripMenuItem})
+        Me.OptionsMenuToolStripMenuItem.Name = "OptionsMenuToolStripMenuItem"
+        Me.OptionsMenuToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
+        Me.OptionsMenuToolStripMenuItem.Text = "Options Menu"
         '
-        'Button3
+        'PaymentsToolStripMenuItem
         '
-        Me.Button3.Location = New System.Drawing.Point(1098, 12)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(139, 39)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "Teste fill table"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.PaymentsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IncomesToolStripMenuItem, Me.ExpendituresToolStripMenuItem})
+        Me.PaymentsToolStripMenuItem.Name = "PaymentsToolStripMenuItem"
+        Me.PaymentsToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.PaymentsToolStripMenuItem.Text = "Payments"
         '
-        'testarlistacomp
+        'IncomesToolStripMenuItem
         '
-        Me.testarlistacomp.Location = New System.Drawing.Point(125, 12)
-        Me.testarlistacomp.Name = "testarlistacomp"
-        Me.testarlistacomp.Size = New System.Drawing.Size(139, 39)
-        Me.testarlistacomp.TabIndex = 1
-        Me.testarlistacomp.Text = "testar comparacao"
-        Me.testarlistacomp.UseVisualStyleBackColor = True
+        Me.IncomesToolStripMenuItem.Name = "IncomesToolStripMenuItem"
+        Me.IncomesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.IncomesToolStripMenuItem.Text = "Incomes"
         '
-        'dgcolQuantia
+        'ExpendituresToolStripMenuItem
         '
-        Me.dgcolQuantia.HeaderText = "Quantia"
-        Me.dgcolQuantia.Name = "dgcolQuantia"
+        Me.ExpendituresToolStripMenuItem.Name = "ExpendituresToolStripMenuItem"
+        Me.ExpendituresToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.ExpendituresToolStripMenuItem.Text = "Expenditures"
         '
-        'dgcolMomento
+        'DgvExpenditures
         '
-        Me.dgcolMomento.HeaderText = "Momento"
-        Me.dgcolMomento.Name = "dgcolMomento"
+        Me.DgvExpenditures.AllowUserToDeleteRows = False
+        Me.DgvExpenditures.AllowUserToResizeColumns = False
+        Me.DgvExpenditures.AllowUserToResizeRows = False
+        Me.DgvExpenditures.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvExpenditures.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvExpenditures.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.DgvExpenditures.ColumnHeadersHeight = 30
+        Me.DgvExpenditures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvExpenditures.DefaultCellStyle = DataGridViewCellStyle5
+        Me.DgvExpenditures.Location = New System.Drawing.Point(12, 312)
+        Me.DgvExpenditures.MultiSelect = False
+        Me.DgvExpenditures.Name = "DgvExpenditures"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvExpenditures.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DgvExpenditures.RowHeadersVisible = False
+        Me.DgvExpenditures.RowHeadersWidth = 33
+        Me.DgvExpenditures.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DgvExpenditures.RowTemplate.Height = 40
+        Me.DgvExpenditures.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvExpenditures.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.DgvExpenditures.Size = New System.Drawing.Size(1223, 221)
+        Me.DgvExpenditures.TabIndex = 2
         '
-        'dgcolFonte
+        'PanelContent
         '
-        Me.dgcolFonte.HeaderText = "Fonte"
-        Me.dgcolFonte.Name = "dgcolFonte"
-        '
-        'dgcolDetalhes
-        '
-        DataGridViewCellStyle1.NullValue = """"""
-        Me.dgcolDetalhes.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgcolDetalhes.HeaderText = "Detalhes"
-        Me.dgcolDetalhes.Name = "dgcolDetalhes"
+        Me.PanelContent.Location = New System.Drawing.Point(12, 36)
+        Me.PanelContent.Name = "PanelContent"
+        Me.PanelContent.Size = New System.Drawing.Size(1240, 597)
+        Me.PanelContent.TabIndex = 6
+        Me.PanelContent.Visible = False
         '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.dgvIncomes)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.testarlistacomp)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnTeste)
+        Me.Controls.Add(Me.DgvExpenditures)
+        Me.Controls.Add(Me.DgvIncomes)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PanelContent)
         Me.IsMdiContainer = True
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Dashboard"
         Me.Text = "Dashboard"
-        CType(Me.dgvIncomes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvIncomes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.DgvExpenditures, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnTeste As Button
-    Friend WithEvents dgvIncomes As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents testarlistacomp As Button
-    Friend WithEvents dgcolQuantia As DataGridViewTextBoxColumn
-    Friend WithEvents dgcolMomento As DataGridViewTextBoxColumn
-    Friend WithEvents dgcolFonte As DataGridViewTextBoxColumn
-    Friend WithEvents dgcolDetalhes As DataGridViewTextBoxColumn
+    Friend WithEvents DgvIncomes As DataGridView
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents OptionsMenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PaymentsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IncomesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExpendituresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DgvExpenditures As DataGridView
+    Friend WithEvents PanelContent As Panel
 End Class

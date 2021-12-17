@@ -6,6 +6,7 @@ namespace DBControl.Migrations
 {
     public partial class ColumnsTypeFix : Migration
     {
+        //These methods Up and Down came empty. I copied from InitialMigration and changed MySQL types
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterDatabase()
