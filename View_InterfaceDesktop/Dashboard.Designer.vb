@@ -43,6 +43,7 @@ Partial Class Dashboard
         '
         'DgvIncomes
         '
+        Me.DgvIncomes.AllowUserToAddRows = False
         Me.DgvIncomes.AllowUserToDeleteRows = False
         Me.DgvIncomes.AllowUserToResizeColumns = False
         Me.DgvIncomes.AllowUserToResizeRows = False
@@ -69,6 +70,7 @@ Partial Class Dashboard
         Me.DgvIncomes.Location = New System.Drawing.Point(12, 60)
         Me.DgvIncomes.MultiSelect = False
         Me.DgvIncomes.Name = "DgvIncomes"
+        Me.DgvIncomes.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -123,6 +125,7 @@ Partial Class Dashboard
         '
         'DgvExpenditures
         '
+        Me.DgvExpenditures.AllowUserToAddRows = False
         Me.DgvExpenditures.AllowUserToDeleteRows = False
         Me.DgvExpenditures.AllowUserToResizeColumns = False
         Me.DgvExpenditures.AllowUserToResizeRows = False
@@ -149,6 +152,7 @@ Partial Class Dashboard
         Me.DgvExpenditures.Location = New System.Drawing.Point(12, 312)
         Me.DgvExpenditures.MultiSelect = False
         Me.DgvExpenditures.Name = "DgvExpenditures"
+        Me.DgvExpenditures.ReadOnly = True
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)

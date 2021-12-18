@@ -75,10 +75,6 @@ Public Class Dashboard
         End If
     End Sub
 
-    Private Sub DgvIncomes_Layout(sender As Object, e As LayoutEventArgs) Handles DgvIncomes.Layout
-
-    End Sub
-
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             lista = _IncomeController.ListIncomes
