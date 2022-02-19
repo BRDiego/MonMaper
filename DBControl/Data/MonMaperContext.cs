@@ -16,8 +16,7 @@ namespace DBControl.Data
                 new MySqlServerVersion( new Version(8, 0, 27)));
         }
 
-        public DbSet<Income> Incomes { get; set; }
-        public DbSet<Expenditure> Expenditures { get; set; }
+        public DbSet<Payment> Payments { get; set; }
 
     }
 }

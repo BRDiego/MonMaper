@@ -7,81 +7,81 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DBControl.Services
 {
-    public class IncomeService
+    public class PaymentService : IPaymentCRUD
     {
         private readonly MonMaperContext _context;
-        public IncomeService(MonMaperContext context)
+        public PaymentService(MonMaperContext context)
         {
             _context = context;
         }
-        public int Insert(Income obj)
+        public int Insert(Payment obj)
         {
             try
             {
-                _context.Incomes.Add(obj);
+                _context.Payments.Add(obj);
                 _context.SaveChanges();
                 return 1;
             }
-            catch (Exception er)
+            catch (Exception )
             {
-                throw new Exception(er.Message);
+                throw;
             }
         }
 
-        public List<Income> ListAll()
+        public List<Payment> ListAll()
         {
             try
             {
-                List<Income> list = _context.Incomes.ToList();
+                List<Payment> list = _context.Payments.ToList();
                 return list;
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                throw new Exception(er.Message);
+                throw;
             }
         }
 
-        public List<Income> ListByMonth(int month)
+        public List<Payment> ListByMonth(int month)
         {
             try
             {
-                List<Income> list = _context.Incomes.Where(x => x.Moment.Month == month).ToList();
+                List<Payment> list = _context.Payments.Where(x => x.Moment.Month == month).ToList();
                 return list;
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                throw new Exception(er.Message);
+                throw;
             }
         }
 
-        public Income FindById(int id)
+        public Payment FindById(int id)
         {
             try
             {
-                var obj = _context.Incomes.Find(id);               
+                var obj = _context.Payments.Find(id);
                 return obj;
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                throw new Exception(er.Message);
+                throw;
             }
         }
 
-        public int Update(Income obj)
+        public int Update(Payment obj)
         {
             try
             {
-                _context.Incomes.Update(obj);
+                _context.Payments.Update(obj);
                 _context.SaveChanges();
                 return 1;
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                throw new Exception(er.Message);
+                throw;
             }
         }
 
-        public int Remove(Income obj)
+        public int Remove(Payment obj)
         {
             try
             {
@@ -89,9 +89,9 @@ namespace DBControl.Services
                 _context.SaveChanges();
                 return 1;
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                throw new Exception(er.Message);
+                throw;
             }
         }
     }
