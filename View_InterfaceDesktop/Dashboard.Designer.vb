@@ -26,13 +26,12 @@ Partial Class Dashboard
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DgvIncomes = New System.Windows.Forms.DataGridView()
-        Me.PanelContent = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.idPayment = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.payAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.payMoment = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.paySource = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.payDetails = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PanelContent = New System.Windows.Forms.Panel()
         CType(Me.DgvIncomes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelContent.SuspendLayout()
         Me.SuspendLayout()
@@ -41,6 +40,7 @@ Partial Class Dashboard
         '
         Me.DgvIncomes.AllowUserToAddRows = False
         Me.DgvIncomes.AllowUserToDeleteRows = False
+        Me.DgvIncomes.AllowUserToOrderColumns = True
         Me.DgvIncomes.AllowUserToResizeColumns = False
         Me.DgvIncomes.AllowUserToResizeRows = False
         Me.DgvIncomes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -64,10 +64,9 @@ Partial Class Dashboard
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvIncomes.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DgvIncomes.Location = New System.Drawing.Point(15, 258)
+        Me.DgvIncomes.Location = New System.Drawing.Point(15, 167)
         Me.DgvIncomes.MultiSelect = False
         Me.DgvIncomes.Name = "DgvIncomes"
-        Me.DgvIncomes.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -82,58 +81,42 @@ Partial Class Dashboard
         Me.DgvIncomes.RowTemplate.Height = 40
         Me.DgvIncomes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DgvIncomes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DgvIncomes.Size = New System.Drawing.Size(595, 380)
+        Me.DgvIncomes.Size = New System.Drawing.Size(595, 471)
         Me.DgvIncomes.TabIndex = 2
-        '
-        'PanelContent
-        '
-        Me.PanelContent.Controls.Add(Me.Button1)
-        Me.PanelContent.Controls.Add(Me.DgvIncomes)
-        Me.PanelContent.Location = New System.Drawing.Point(12, 12)
-        Me.PanelContent.Name = "PanelContent"
-        Me.PanelContent.Size = New System.Drawing.Size(1240, 657)
-        Me.PanelContent.TabIndex = 6
-        Me.PanelContent.Visible = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(35, 14)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 54)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'idPayment
         '
         Me.idPayment.HeaderText = "idPayment"
         Me.idPayment.Name = "idPayment"
-        Me.idPayment.ReadOnly = True
         Me.idPayment.Visible = False
         '
         'payAmount
         '
         Me.payAmount.HeaderText = "Amount"
         Me.payAmount.Name = "payAmount"
-        Me.payAmount.ReadOnly = True
         '
         'payMoment
         '
         Me.payMoment.HeaderText = "Moment"
         Me.payMoment.Name = "payMoment"
-        Me.payMoment.ReadOnly = True
         '
         'paySource
         '
         Me.paySource.HeaderText = "Source"
         Me.paySource.Name = "paySource"
-        Me.paySource.ReadOnly = True
         '
         'payDetails
         '
         Me.payDetails.HeaderText = "Details"
         Me.payDetails.Name = "payDetails"
-        Me.payDetails.ReadOnly = True
+        '
+        'PanelContent
+        '
+        Me.PanelContent.Controls.Add(Me.DgvIncomes)
+        Me.PanelContent.Location = New System.Drawing.Point(12, 12)
+        Me.PanelContent.Name = "PanelContent"
+        Me.PanelContent.Size = New System.Drawing.Size(1240, 657)
+        Me.PanelContent.TabIndex = 6
         '
         'Dashboard
         '
@@ -152,7 +135,6 @@ Partial Class Dashboard
     End Sub
     Friend WithEvents DgvIncomes As DataGridView
     Friend WithEvents PanelContent As Panel
-    Friend WithEvents Button1 As Button
     Friend WithEvents idPayment As DataGridViewTextBoxColumn
     Friend WithEvents payAmount As DataGridViewTextBoxColumn
     Friend WithEvents payMoment As DataGridViewTextBoxColumn
